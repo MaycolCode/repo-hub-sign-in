@@ -1,7 +1,7 @@
 <div class="flex items-center justify-center h-screen">
   <p-card [style]="{ width: '30rem', overflow: 'hidden' }">
     <ng-template #header>
-      <div class="flex justify-center py-4">
+      <div class="flex justify-center py-6">
         <img
           alt="Card"
           src="https://expertiahub-web.nmviajes-it.com/images/Dashboard.png"
@@ -13,7 +13,7 @@
         <div class="flex flex-col justify-center gap-3 px-14">
           <p>Ingresar su correo</p>
           <input
-            id="usemail"
+            id="email"
             pInputText
             class="w-full"
             type="text"
@@ -24,14 +24,21 @@
         <div class="flex flex-col justify-center gap-3">
           <p class="px-14">Ingresar el código</p>
           <div class="flex justify-center gap-3 px-14">
-            <p-inputotp id="otpcode" size="large" [length]="6" />
+            <p-inputotp id="email_ver_input" size="large" [length]="6" />
           </div>
         </div>
       </div>
     </ng-template>
     <ng-template #footer>
       <div class="flex gap-4 my-10 px-14">
-        <p-button label="Continuar" class="w-full" styleClass="w-full" />
+        <p-button id="email_ver_but_send" label="Enviar código de verificación" class="w-full" styleClass="w-full" />
+      </div>
+      <div class="flex gap-4 my-10 px-14">
+        <p-button id="email_ver_but_resend" label="Enviar nuevo código" class="w-full" styleClass="w-full" />
+      </div>
+      <div class="flex gap-4 my-10 px-14">
+        <p-button id="idBtn_Back" label="Atrás" class="w-full" styleClass="w-full" />
+        <p-button id="continue" label="Continuar" class="w-full" styleClass="w-full" />
       </div>
     </ng-template>
   </p-card>
